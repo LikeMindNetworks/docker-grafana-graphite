@@ -72,6 +72,7 @@ RUN     cd /opt/graphite/webapp/graphite && python manage.py syncdb --noinput
 
 # Configure Grafana
 ADD     ./grafana/custom.ini /opt/grafana/conf/custom.ini
+ADD     ./grafana/home.json /opt/grafana/public/dashboards/home.json
 
 # Add the default dashboards
 RUN     mkdir /src/dashboards
