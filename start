@@ -23,4 +23,6 @@ docker run \
    --volume=$(pwd)/configs/grafana/home.json:/opt/grafana/public/dashboards/home.json \
    --volume=$(pwd)/configs/graphite/storage-schemas.conf:/opt/graphite/conf/storage-schemas.conf \
    --volume=$(pwd)/configs/statsd/config.js:/src/statsd/config.js \
+   -e GF_USERS_ALLOW_SIGN_UP=false \
+   -e GF_ALLOW_ORG_CREATE=false \
    kamon/grafana_graphite
