@@ -1,0 +1,16 @@
+#! /bin/bash
+
+mkdir -p ~/statsd/data/whisper
+mkdir -p ~/statsd/data/elasticsearch
+mkdir -p ~/statsd/data/grafana
+mkdir -p ~/statsd/log/graphite
+mkdir -p ~/statsd/log/graphite/webapp
+mkdir -p ~/statsd/log/elasticsearch
+mkdir -p ~/statsd/configs/graphite
+mkdir -p ~/statsd/configs/statsd
+mkdir -p ~/statsd/configs/grafana
+chmod -R 777 ~/statsd/*
+
+cp graphite/storage-schemas.conf ~/statsd/configs/graphite/storage-schemas.conf
+cp statsd/config.js ~/statsd/configs/statsd/config.js
+cp grafana/home.json ~/statsd/configs/grafana/home.json
