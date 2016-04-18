@@ -1,6 +1,6 @@
 #! /bin/bash
 
-cd /home/ec2-user/statsd
+cd ~/statsd
 
 CONTAINER_NAME="grafana-dashboard"
 if [ $(docker ps -a | grep $CONTAINER_NAME | awk '{print $NF}' | wc -l) -gt 0 ];then
